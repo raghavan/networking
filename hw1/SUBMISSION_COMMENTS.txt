@@ -1,0 +1,8 @@
+
+Web pages referred:
+
+http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html#getaddrinfo
+http://www.lemoda.net/c/fetch-web-page/index.html
+http://www.daniweb.com/software-development/c/code/216411/reading-a-file-line-by-line
+http://coding.debuntu.org/c-linux-socket-programming-tcp-simple-http-client
+

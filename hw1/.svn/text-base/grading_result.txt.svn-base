@@ -1,0 +1,18 @@
+[SUCCESS] files submitted using svn? [2]: 2
+[SUCCESS] index.html created for http://www.google.com? [0.25]: 0.25
+[SUCCESS] skype_logo.png created for http://c.skype.com/i/images/logos/skype_logo.png? [0.25]: 0.25
+[SUCCESS] images_logo_lg.gif created for http://images.google.com/intl/en_ALL/images/logos/images_logo_lg.gif? [0.25]: 0.25
+[SUCCESS] chord_sigcomm.pdf created for http://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf? [0.25]: 0.25
+[SUCCESS] exit with error for http://www.google.com/thispagedoesnotexist? [0.25]: 0.25
+[SUCCESS] exit with error for http://www.thissitedoesnotexist1000.com? [0.25]: 0.25
+[SUCCESS] exit with error for http://www.skype.com? [0.25]: 0.25
+[SUCCESS] skype_logo.png size correct? [0.25]: 0.25
+[SUCCESS] images_logo_lg.gif size correct? [0.25]: 0.25
+[SUCCESS] chord_sigcomm.pdf size correct? [0.25]: 0.25
+[SUCCESS] skype_logo.png content correct? [0.25]: 0.25
+[SUCCESS] images_logo_lg.gif content correct? [0.25]: 0.25
+[SUCCESS] chord_sigcomm.pdf content correct? [0.25]: 0.25
+[SUCCESS] amazon-kindle-review created for http://www.engadget.com/2010/08/27/amazon-kindle-review? [0.25]: 0.25
+[SUCCESS] index.html created for http://www.engadget.com/2010/08/27/amazon-kindle-review/? [0.25]: 0.25
+[SUCCESS] Lenses-Product-Reviews-AdoramaTV created for http://www.adorama.com/alc/0012691/article/Lenses-Product-Reviews-AdoramaTV? [0.25]: 0.25
+Total score: 6

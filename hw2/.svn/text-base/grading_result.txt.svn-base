@@ -1,0 +1,16 @@
+[SUCCESS] index.html created for host:port? [0.25]: 0.25
+[SUCCESS] header correct for host:port? [0.25]: 0.25
+[SUCCESS] pic.html created for host:port/pic.html? [0.25]: 0.25
+[SUCCESS] monorail.jpg created for host:port/monorail.jpg? [0.25]: 0.25
+[SUCCESS] google.gif created for host:port/google.gif? [0.25]: 0.25
+[SUCCESS] header correct for host:port/google.gif? [0.25] [0.25]: 0.25
+[SUCCESS] skype.png created for host:port/skype.png? [0.25]: 0.25
+[SUCCESS] header correct for host:port/skype.png? [0.25] [0.25]: 0.25
+[SUCCESS] paper.pdf created for host:port/paper.pdf [0.25]: 0.25
+[SUCCESS] skype.png content correct? [0.25]: 0.25
+[SUCCESS] paper.pdf content correct? [0.5]: 0.5
+[SUCCESS] index.html created for host:port/test/dir/? [0.5]: 0.5
+[SUCCESS] testpage.html created for host:port/test/dir/testpage.html? [0.5]: 0.5
+[SUCCESS] error returned for non-existing page [1]: 1
+[SUCCESS] fetched index.html when another request was in progress [1]: 1
+Total score: 6
