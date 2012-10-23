@@ -1,0 +1,96 @@
+TEST FOR pthread and select
+=====================================
+grep for pthread:
+
+grep for select:
+        //to place messages in a buffer and will be send when writeset it selected
+        int rdy = select(FD_SETSIZE,&fdrset_clone,&fdwset_clone,0, 0);
+            if(FD_ISSET(peer->socket,&fdwset_clone)){
+            if(FD_ISSET(peer->socket,&fdrset_clone)) 
+
+TEST FOR cs450files02.torrent
+=====================================
+file1 md5: CORRECT
+file2 md5: CORRECT
+file3 md5: CORRECT
+file4 md5: CORRECT
+file5 md5: CORRECT
+file6 md5: CORRECT
+file7 md5: CORRECT
+file8 md5: CORRECT
+
+seed ips:
+131.193.34.150
+131.193.34.173
+131.193.34.193
+
+count for seed ips (high value means concurrent download):
+997
+
+download speed aggregated by seconds in kbps (top 5 are taken):
+640.352
+640.352
+640.352
+624.343
+624.343
+
+TEST FOR cs450files.torrent
+=====================================
+peer ips:
+128.111.52.58
+128.138.207.54
+128.163.142.21
+128.208.4.197
+128.208.4.198
+128.223.8.114
+128.252.19.18
+128.36.233.154
+128.42.142.41
+128.42.142.44
+128.8.126.111
+129.74.74.19
+130.216.1.22
+130.49.221.40
+13.7.64.22
+192.16.125.12
+195.113.161.83
+195.116.53.14
+199.26.254.68
+202.112.28.100
+202.116.81.194
+202.116.81.195
+202.249.37.69
+204.8.155.226
+204.8.155.227
+206.117.37.5
+206.23.240.29
+208.77.77.196
+211.69.207.34
+213.131.1.101
+219.243.208.60
+220.245.140.196
+66.140.111.5
+72.36.112.79
+93.180.0.114
+
+count for peer ips (high value means concurrent download):
+1310
+
+download speed aggregated by seconds in kbps (top 5 are taken):
+992.545
+864.475
+864.475
+816.448
+768.422
+
+uploaded to following ips:
+128.138.207.54
+129.74.74.19
+192.16.125.12
+202.249.37.69
+208.77.77.196
+211.69.207.34
+213.131.1.101
+93.180.0.114
+
+Total score: 12

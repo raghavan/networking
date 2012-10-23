@@ -1,0 +1,115 @@
+TEST FOR pthread and select
+=====================================
+grep for pthread:
+
+grep for select:
+        //to place messages in a buffer and will be send when writeset it selected
+        int rdy = select(FD_SETSIZE,&fdrset_clone,&fdwset_clone,0, 0);
+            if(FD_ISSET(peer->socket,&fdwset_clone)){
+            if(FD_ISSET(peer->socket,&fdrset_clone)) 
+
+TEST FOR cs450files02.torrent
+=====================================
+file1 md5: CORRECT
+file2 md5: CORRECT
+file3 md5: CORRECT
+file4 md5: CORRECT
+file5 md5: CORRECT
+file6 md5: CORRECT
+file7 md5: CORRECT
+file8 md5: CORRECT
+
+seed ips:
+131.193.34.150
+131.193.34.173
+131.193.34.193
+
+count for seed ips (high value means concurrent download):
+988
+
+download speed aggregated by seconds in kbps (top 5 are taken):
+640.352
+640.352
+640.352
+640.352
+624.343
+
+TEST FOR cs450files.torrent
+=====================================
+peer ips:
+128.10.19.53
+128.111.52.58
+128.143.6.134
+128.163.142.21
+128.208.4.197
+128.208.4.198
+128.223.8.112
+128.223.8.114
+128.227.150.12
+128.252.19.18
+128.42.142.41
+128.6.192.158
+129.186.205.79
+129.22.150.29
+129.22.150.78
+129.63.159.101
+129.82.12.188
+129.93.229.138
+129.97.74.12
+130.216.1.23
+130.49.221.40
+131.247.2.246
+132.170.3.32
+132.72.23.11
+133.15.59.2
+133.68.253.243
+133.9.81.164
+133.9.81.166
+136.145.115.196
+137.132.80.106
+137.165.1.113
+138.26.66.5
+139.19.142.5
+139.19.158.227
+139.19.158.235
+140.247.60.123
+141.161.20.33
+141.213.4.202
+142.150.238.13
+206.117.37.6
+206.23.240.29
+211.69.207.34
+219.243.208.62
+93.180.0.114
+
+count for peer ips (high value means concurrent download):
+1098
+
+download speed aggregated by seconds in kbps (top 5 are taken):
+1120.62
+1120.62
+1072.59
+1072.59
+1024.56
+
+uploaded to following ips:
+128.111.52.58
+128.143.6.134
+128.163.142.21
+128.208.4.197
+128.223.8.112
+128.6.192.158
+129.22.150.29
+129.63.159.101
+129.97.74.12
+132.170.3.32
+133.15.59.2
+133.9.81.164
+136.145.115.196
+137.132.80.106
+137.165.1.113
+139.19.142.5
+140.247.60.123
+206.117.37.6
+206.23.240.29
+211.69.207.34
