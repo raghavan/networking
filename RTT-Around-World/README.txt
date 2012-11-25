@@ -1,4 +1,4 @@
-Using Planet-lab machines to find the RTT between each country and try to locate an approximate location of a IP based on its ping time.
+With the help of Planet-lab machines found the RTT between each country and developed a framework to locate an IP's latittude/longitude  based on its ping time.
 
 Using the latex template and gnuplot, create a report containing the following elements. Each element is to be duplicated for at least two independent sets of measurements, at significantly different times of day. Report the time and date for each set.
 Scatterplot of pair-wise round-trip time measurements. Plot the distance between the hosts on the X axis, and the round-trip time on the Y axis. For example, "plot [:] [0:500] 'thefile' using 1:2" would generate a scatterplot.
