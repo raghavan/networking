@@ -1,0 +1,2 @@
+#to extract the dist and ping data from the collect processed_dist_data.txt
+cat data/processed_dist_data.txt | awk '{print $10 " " $7}' | sort -n -k1 > data/only_dist_ping_with_dup.txt

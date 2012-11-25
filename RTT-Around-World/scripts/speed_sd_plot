@@ -1,0 +1,19 @@
+rm speed_sd_plot.ps
+rm speed_sd_plot.pdf
+
+file=data/speed_variance.txt
+
+
+gnuplot <<EOF
+ # use this line on a mac
+ # set term aqua font 'garamond, 18'
+
+ # these lines to make a ps file. remove them to get an on-screen plot on a linux box
+ set term postscript 18 lw 2.0
+ set output "speed_sd_plot.ps"
+
+ set ylabel "Variance of speed "
+ set xlabel "Speed"
+plot[:][:] '$file' using (\$1):(\$2)
+EOF
+pstopdf speed_sd_plot.ps

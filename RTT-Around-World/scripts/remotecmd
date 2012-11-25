@@ -1,0 +1,6 @@
+for host in `cat rkrish20/data/ips.txt`;do
+ping -i 0.2 -W 8 -c 5 $host > rkrish20/logs/$host.log&
+done
+wait
+cat rkrish20/logs/*.log
+rm -r rkrish20

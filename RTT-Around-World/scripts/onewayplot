@@ -1,0 +1,16 @@
+file=data/post-processed.txt
+
+gnuplot <<EOF
+ # use this line on a mac
+ # set term aqua font 'garamond, 18'
+
+ # these lines to make a ps file. remove them to get an on-screen plot on a linux box
+ set term postscript 18 lw 2.0
+ set output "oneway.ps"
+
+ set ylabel "One-Way Time (ms)"
+ set xlabel "Sample #"
+ plot [0:] [0:] '$file' using (\$11/2.0) title 'one-way time' with lines,\
+	        '$file' using (\$11/2.0+5) title 'one-way time + 5' with points
+EOF
+pstopdf oneway.ps

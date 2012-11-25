@@ -1,0 +1,27 @@
+#val=$(tail -1  data/only_dist_ping_with_dup.txt | awk '{print $1'})
+#echo $val
+ #$val = int($val)
+#x=0
+#while [ $x -le $val ]
+#do
+# cat data/only_dist_ping_with_dup.txt | awk '$1 == $x {sum+=$2;c++} END{print $x,sum/c}'
+#  x=$(( $x + 1 ))
+#done
+
+
+#cat data/only_dist_ping_with_dup.txt | awk '{print $1}' | uniq
+
+#for i in `cat data/only_dist_ping_with_dup.txt | awk '{print $1}' | uniq`
+#do
+#echo $i
+#cat data/only_dist_ping_with_dup.txt | awk 'if( $1 == $i);do{sum+=$1;c++}else{'
+#donei
+
+#cat data/only_dist_ping_with_dup.txt | uniq  > data/mean_ping_dist_data.txt
+
+#cat data/only_dist_ping_with_dup.txt | awk 'BEGIN {flag=1} {if(flag==1){flag=0;d=$1;r=$2}else{if($1 == d){ r=r+$2/2}else{print $d,$r}}}END {print $d, $r}' 
+
+
+
+cat data/only_dist_ping_with_dup.txt | awk 'BEGIN { d="none";a="none" } { if(d != "none") { if($1 == d) { a = a + $2; a = int(a / 2); } else { print d,a; d=$1;a=$2 } } else{ d=$1;a=$2 } } END { print d,a } ' > data/mean_ping_dist_data.txt
+

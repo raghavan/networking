@@ -1,0 +1,9 @@
+cat data/mean_ping_dist_data.txt | awk '$2 != 0 {speed=($1*1000*2)/$2 } {print $1" " $2" "speed}' > data/speed_of_bits.txt
+
+mean_speed=$(cat data/speed_of_bits.txt | awk '{sum+=$3;c++} END{print sum/c}')
+
+cat data/speed_of_bits.txt | awk '{sum+=$3;c++} END{print sum/c}' > data/speed_mean.txt
+
+cat data/speed_of_bits.txt | awk '{print $3 " "($3-mean_speed)}' mean_speed=$mean_speed > data/speed_variance.txt
+
+cat data/speed_variance.txt | awk '{sum+=($2*$2);c++} END{print sqrt(sum/c)}' > data/speed_sd_value.txt

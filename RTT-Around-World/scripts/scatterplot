@@ -1,0 +1,18 @@
+rm scatterplot.ps
+rm scatterplot.pdf
+
+file=data/processed_dist_data.txt
+
+gnuplot <<EOF
+ # use this line on a mac
+ # set term aqua font 'garamond, 18'
+
+ # these lines to make a ps file. remove them to get an on-screen plot on a linux box
+ set term postscript 18 lw 2.0
+ set output "scatterplot.ps"
+
+ set ylabel "RTT  (ms)"
+ set xlabel "Distance (Kms)"
+ plot [0:] [0:500] '$file' using (\$10):(\$7) title 'RTT time'
+EOF
+pstopdf scatterplot.ps

@@ -1,0 +1,12 @@
+for host1 in `cat data/ips.txt`;do
+  lat1=$(cat data/IP_locations.txt | grep $host1 | awk '{print $2}')
+  long1=$(cat data/IP_locations.txt | grep $host1 | awk '{print $3}') 
+  #echo "for host1 --> $host1; lat = $lat1 ; long = $long"
+  for host2 in  `cat data/ips.txt`;do
+  lat2=$(cat data/IP_locations.txt | grep $host2 | awk '{print $2}')
+  long2=$(cat data/IP_locations.txt | grep $host2 | awk '{print $3}')  
+     #echo "for host2 --> $host2 ; lat2 -> $lat2 ; long2 -> $long2"
+     result=$(perl scripts/gcdist.pl $lat1 $long1 $lat2 $long2)
+     echo "Distance between $host1 and $host2 is $result" >> data/dist_data.txt
+  done 
+done

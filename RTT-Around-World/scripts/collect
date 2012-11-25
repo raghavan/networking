@@ -1,0 +1,16 @@
+rm logs/* 
+
+# change twoips to just ips to run it on all hosts 
+rm scripts/remotecmd_*
+
+for host in `cat data/ips.txt`; do 
+ echo "Now collecting from $host";
+for host_inner in `cat data/ips.txt`; do
+echo "ping -i 0.2 -W 15 -c 10 $host_inner" >> scripts/remotecmd_$host;
+done
+timeout 100 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o ConnectTimeout=5 -T  uic_cs450@$host < scripts/remotecmd_$host > logs/$host.log& 
+done
+wait
+
+rm scripts/remotecmd_*
+

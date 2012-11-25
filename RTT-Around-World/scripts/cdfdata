@@ -1,0 +1,1 @@
+cat data/mean_ping_dist_data.txt | awk '{c++} {print $1,c}' > data/cdf.txt

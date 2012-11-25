@@ -1,0 +1,16 @@
+rm data/raw.txt
+for host in `cat data/ips.txt`; do 
+ cat logs/$host.log | awk '{print from,$0}' from=$host >> data/raw.txt;
+done
+
+# at this point, raw.txt contains all everything
+# now you need to figure out the relevant locations and distances
+
+cat data/raw.txt | grep icmp_seq | tr '=' ' ' > data/post-processed.txt
+
+#sed -e '/Time to live exceeded/d' data/post-processed1.txt > data/post-processed2.txt
+
+#sed -e '/Destination Host Unreachable/d' data/post-processed2.txt > data/post-processed.txt
+
+#rm data/post-processed1.txt
+#rm data/post-processed2.txt

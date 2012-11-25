@@ -1,0 +1,21 @@
+rm cdfplot.ps
+rm cdfplot.pdf
+
+file=data/cdf.txt
+
+max_dist=$(tail -1 data/cdf.txt | awk '{print $1}')
+max_rtt=$(tail -1 data/cdf.txt | awk '{print $2}')
+
+gnuplot <<EOF
+ # use this line on a mac
+ # set term aqua font 'garamond, 18'
+
+ # these lines to make a ps file. remove them to get an on-screen plot on a linux box
+ set term postscript 18 lw 2.0
+ set output "cdfplot.ps"
+
+ set ylabel "RTT  (ms)"
+ set xlabel "Distance (Kms)"
+plot[0:$max_dist][0:1] './data/cdf.txt' using (\$1):(\$2/$max_rtt) with lines
+EOF
+pstopdf cdfplot.ps

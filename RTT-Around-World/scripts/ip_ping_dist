@@ -1,0 +1,35 @@
+rm data/ping_dist_data.txt
+rm data/host1_ping.txt
+rm data/host1_dist.txt
+rm data/pingtmp.txt
+
+#cat data/post-processed.txt | awk '{print$1 getline $5}' | uniq > data/obtaineduniqips.txt
+
+for host1 in `cat data/ips.txt`;do
+  cat data/post-processed.txt | grep $host1 > host1_ping.txt
+  cat data/dist_data.txt | grep $host1 > host1_dist.txt
+  for host2 in  `cat data/ips.txt`;do
+    if [ $host1 != $host2 ];then
+    #ping_time=$(cat host1_ping.txt | grep $host2 | awk '{sum+=$11;c++} END{print int(sum/c)}')
+
+    cat host1_ping.txt | grep $host2 | awk '{print int($11)}' > data/pingtmp.txt
+    distance=$(cat host1_dist.txt | grep $host2 | awk '{sum+=$7;c++} END{print int(sum/c)}')
+    for pingval in `cat data/pingtmp.txt`;do
+	echo "ping val $pingval and distance $distance"
+    	if [ $pingval -ge 0  -a  $distance -ge 0 ]; then
+    	    echo "Between $host1 and $host2 ping time $pingval and distance $distance" >> data/ping_dist_data.txt     
+    	fi
+    done
+   fi
+  done 
+done
+
+rm data/host1_dist.txt
+rm data/host1_ping.txt
+rm data/processed_dist_data.txt
+
+cat data/ping_dist_data.txt | awk '$7 != "-nan" {print}' > data/processed_dist_data.txt
+
+
+
+
